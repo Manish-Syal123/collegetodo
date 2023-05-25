@@ -28,8 +28,20 @@ function TodoList() {
       text: text,
       completed: false,
     };
+
+    // If the entered input is already present then flag=1 if not then flag remains 0
+    let flag = 0;
+    for (let i = 0; i < todos.length; i++) {
+      if (todos[i].text == newTodo.text) {
+        flag = 1;
+        break;
+      }
+    }
+
     if (newTodo.text === "") {
       alert("Please 🙏 add ✍️ some task in input field 😊");
+    } else if (flag == 1) {
+      alert("The given input....☠️....text ✍️ already exists 🚀");
     } else {
       setTodos([...todos, newTodo]);
     }
