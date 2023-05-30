@@ -115,14 +115,14 @@ function TodoList() {
                   className="userindputfild"
                   onChange={() => handleComplete(todo.id)}
                 />
-                <span
+                <textarea
                   style={{
                     textDecoration: todo.completed ? "line-through" : "none",
                   }}
                   className="spanfild"
                 >
                   {todo.text}
-                </span>
+                </textarea>
                 <RiDeleteBin2Fill
                   onClick={() => deleteItem(todo.id)}
                   className="bin"
